@@ -1,4 +1,6 @@
+using BusinessPartners.Api.Services;
 using BusinessPartners.Domain.Repositories;
+using BusinessPartners.Domain.Services;
 using BusinessPartners.InfraData.DataContext;
 using BusinessPartners.InfraData.Repositories;
 using Microsoft.AspNetCore.Builder;
@@ -16,8 +18,9 @@ namespace BusinessPartners.Api
             services.AddMvc();
             //services.AddMvc(op => op.EnableEndpointRouting = false);
 
-            services.AddTransient<Context, Context>();
+            services.AddTransient<BusinessPartnersContext, BusinessPartnersContext>();
             services.AddTransient<IPartnerRepository, PartnerRepository>();
+            services.AddTransient<IPartnerService, PartnerService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

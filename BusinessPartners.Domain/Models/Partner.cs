@@ -6,6 +6,7 @@ namespace BusinessPartners.Domain.Models
     {
         public Partner(string name, string businessName, string businessNumber)
         {
+            Id = Guid.NewGuid();
             Name = name;
             BusinessName = businessName;
             BusinessNumber = businessNumber;

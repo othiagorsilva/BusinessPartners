@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BusinessPartners.InfraData.Migrations
 {
-    [DbContext(typeof(Context))]
+    [DbContext(typeof(BusinessPartnersContext))]
     partial class ContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

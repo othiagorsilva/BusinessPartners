@@ -4,6 +4,7 @@ namespace BusinessPartners.Domain.Repositories
 {
     public interface IPartnerRepository : IRepository
     {
-        void Add(Partner partnerModel);
+        void Add(Partner partnerDomainModel);
+        bool BusinessNumberExists(string businessNumber);
     }
 }

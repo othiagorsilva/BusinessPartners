@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BusinessPartners.InfraData.DataContext
 {
-    public class Context : DbContext
+    public class BusinessPartnersContext : DbContext
     {
         public DbSet<Partner> Partners { get; set; }
         

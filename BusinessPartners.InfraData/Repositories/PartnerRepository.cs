@@ -3,6 +3,7 @@ using System.Linq;
 using BusinessPartners.Domain.Models;
 using BusinessPartners.Domain.Repositories;
 using BusinessPartners.InfraData.DataContext;
+using BusinessPartners.InfraData.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BusinessPartners.InfraData.Repositories
@@ -18,7 +19,7 @@ namespace BusinessPartners.InfraData.Repositories
 
         public void Add(Partner partnerDomainModel)
         {
-            Models.Partner partnerDataModel = new Models.Partner(partnerDomainModel);
+            PartnerDataModel partnerDataModel = new PartnerDataModel(partnerDomainModel);
 
             _bpContext.Partners.Add(partnerDataModel);
             _bpContext.SaveChanges();

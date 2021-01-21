@@ -22,6 +22,7 @@ namespace BusinessPartners.Api.Services
                 {
                     Partner partnerModel = new Partner(name, businessName, businessNumber);
                     _partnerRepository.Add(partnerModel);
+                    return;
                 }
 
                 throw new Exception("BusinessNumber already exists");

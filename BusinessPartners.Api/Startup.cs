@@ -15,8 +15,7 @@ namespace BusinessPartners.Api
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-            //services.AddMvc(op => op.EnableEndpointRouting = false);
+            services.AddMvc(op => op.EnableEndpointRouting = false);
 
             services.AddTransient<BusinessPartnersContext, BusinessPartnersContext>();
             services.AddTransient<IPartnerRepository, PartnerRepository>();

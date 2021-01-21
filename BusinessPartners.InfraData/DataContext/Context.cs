@@ -5,7 +5,7 @@ namespace BusinessPartners.InfraData.DataContext
 {
     public class BusinessPartnersContext : DbContext
     {
-        public DbSet<Partner> Partners { get; set; }
+        public DbSet<PartnerDataModel> Partners { get; set; }
         
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

@@ -1,12 +1,13 @@
 using System;
+using BusinessPartners.Domain.Models;
 
 namespace BusinessPartners.InfraData.Models
 {
-    public class Partner
+    public class PartnerDataModel
     {
-        protected Partner() {}
+        protected PartnerDataModel() {}
 
-        public Partner(Domain.Models.Partner domainModel)
+        public PartnerDataModel(Partner domainModel)
         {
             Id = domainModel.Id;
             Name = domainModel.Name;

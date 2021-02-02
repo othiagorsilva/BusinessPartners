@@ -5,11 +5,11 @@ using BusinessPartners.Domain.Services;
 
 namespace BusinessPartners.Api.Services
 {
-    public class PartnerService : IPartnerService
+    public class CreatePartnerService : IPartnerService
     {
         private readonly IPartnerRepository _partnerRepository;
 
-        public PartnerService(IPartnerRepository partnerRepository)
+        public CreatePartnerService(IPartnerRepository partnerRepository)
         {
             _partnerRepository = partnerRepository;
         }
@@ -20,8 +20,8 @@ namespace BusinessPartners.Api.Services
             {
                 if (!_partnerRepository.BusinessNumberExists(businessNumber))
                 {
-                    Partner partnerModel = new Partner(name, businessName, businessNumber);
-                    _partnerRepository.Add(partnerModel);
+                    Partner partnerDomainModel = new Partner(name, businessName, businessNumber);
+                    _partnerRepository.Add(partnerDomainModel);
                     return;
                 }
 

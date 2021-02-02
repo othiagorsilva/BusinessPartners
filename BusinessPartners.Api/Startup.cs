@@ -19,7 +19,7 @@ namespace BusinessPartners.Api
 
             services.AddTransient<BusinessPartnersContext, BusinessPartnersContext>();
             services.AddTransient<IPartnerRepository, PartnerRepository>();
-            services.AddTransient<IPartnerService, PartnerService>();
+            services.AddTransient<IPartnerService, CreatePartnerService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

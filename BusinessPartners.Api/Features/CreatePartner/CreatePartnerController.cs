@@ -4,18 +4,18 @@ using BusinessPartners.Api.ViewModels;
 
 namespace BusinessPartners.Api.Controllers
 {
-    public class PartnerController : Controller
+    public class CreatePartnerController : Controller
     {
         private readonly IPartnerService _partnerService;
 
-        public PartnerController(IPartnerService partnerService)
+        public CreatePartnerController(IPartnerService partnerService)
         {
             _partnerService = partnerService;
         }
 
         [Route("v1/partners")]
         [HttpPost]
-        public IActionResult Post([FromBody]PartnerViewModel newPartner)
+        public IActionResult Post([FromBody]CreatePartnerViewModel newPartner)
         {
             try
             {

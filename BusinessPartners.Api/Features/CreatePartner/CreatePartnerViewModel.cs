@@ -1,6 +1,6 @@
 namespace BusinessPartners.Api.ViewModels
 {
-    public class PartnerViewModel
+    public class CreatePartnerViewModel
     {
         public string Name { get; set; }
         public string BusinessName { get; set; }

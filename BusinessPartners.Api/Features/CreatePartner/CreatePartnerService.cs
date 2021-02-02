@@ -20,7 +20,7 @@ namespace BusinessPartners.Api.Services
             {
                 if (!_partnerRepository.BusinessNumberExists(businessNumber))
                 {
-                    Partner partnerDomainModel = new Partner(name, businessName, businessNumber);
+                    Partner partnerDomainModel = Partner.CreateNewPartner(name, businessName, businessNumber);
                     _partnerRepository.Add(partnerDomainModel);
                     return;
                 }
